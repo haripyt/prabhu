@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chennai Smart Bus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGYFM5M5ND"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DGYFM5M5ND');
+</script>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="route-panel">
+  <select id="from"></select>
+  <button onclick="swapLocations()">⇅</button>
+  <select id="to"></select>
+  <button onclick="startRoute()">Start</button>
+</div>
+
+<div id="bottomSheet" class="bottom-sheet">
+  <div class="drag-bar"></div>
+  <div id="sheetContent">Select route to start</div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
